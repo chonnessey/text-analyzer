@@ -31,7 +31,17 @@ function numberOfOccurrencesInText(word, text) {
 }
 
 function boldPassage(word, text) {
-  return "<p>" + text + "</p>";
+  let htmlString = "<p>"
+  let textArray = text.split(" ");
+  textArray.forEach(function(element) {
+    if (word === element) {
+      htmlString = htmlString.concat("<b>" + element + "</b>");
+    } else {
+      htmlString = htmlString.concat(element);
+    }
+    htmlString = htmlString.concat(" ");
+  });
+  return htmlString + "</p>";
 }
 
 //UI Logic //s
