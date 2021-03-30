@@ -16,6 +16,9 @@
 // }
 
 function numberOfOccurrencesInText(word, text) {
+  if (text.trim().length === 0) {
+    return 0;
+  }
   const wordArray = text.split(" ");
   let wordCount = 0;
   wordArray.forEach(function(element){
@@ -23,5 +26,9 @@ function numberOfOccurrencesInText(word, text) {
       wordCount++
     }
   });
+  console.log(wordArray);
+  console.log(wordCount);
   return wordCount;
 }
+
+numberOfOccurrencesInText("Red", "My fav color is red")
