@@ -30,6 +30,10 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
+function boldPassage(word, text) {
+  return "<p>" + text + "</p>";
+}
+
 //UI Logic //s
 $(document).ready(function(){
   $("form#word-counter").submit(function(event){
