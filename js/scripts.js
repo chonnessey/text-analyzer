@@ -16,23 +16,21 @@ function wordCounter(text) {
 }
 
 function numberOfOccurrencesInText(word, text) {
-  if (text.trim().length === 0) {
+  if ((text.trim().length === 0) || (word.trim().length === 0)) {
     return 0;
   }
   const wordArray = text.split(" ");
   let wordCount = 0;
   wordArray.forEach(function(element) {
-    if (word.toUpperCase().includes(element.toUpperCase())) {
+    if (element.toUpperCase().includes(word.toUpperCase())) {
       wordCount++
     }
   });
-  // console.log(wordArray);
-  // console.log(wordCount);
+
   return wordCount;
 }
 
 //UI Logic //s
-
 $(document).ready(function(){
   $("form#word-counter").submit(function(event){
     event.preventDefault();
