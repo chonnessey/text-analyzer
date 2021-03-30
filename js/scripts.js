@@ -26,8 +26,8 @@ function numberOfOccurrencesInText(word, text) {
       wordCount++
     }
   });
-  console.log(wordArray);
-  console.log(wordCount);
+  // console.log(wordArray);
+  // console.log(wordCount);
   return wordCount;
 }
 
