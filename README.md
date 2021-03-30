@@ -57,5 +57,12 @@ Test: "It should return a word match regardless of case."
 Code:
 const text = "red RED Red green Green GREEN";
 const word = "Red";
-wordCounter(word, text);
+numberOfOccurencesInText(word, text);
+Expected Output: 3
+
+Test: "It should return a word match regardless of punctuation."
+Code:
+const text = "Red! Red. I like red, don't you?";
+const word = "Red";
+numberOfOccurencesInText(word, text);
 Expected Output: 3

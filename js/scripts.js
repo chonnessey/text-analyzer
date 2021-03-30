@@ -21,8 +21,9 @@ function numberOfOccurrencesInText(word, text) {
   }
   const wordArray = text.split(" ");
   let wordCount = 0;
-  wordArray.forEach(function(element){
-    if (word === element) {
+  wordArray.forEach(function(element) {
+  // word.toUppercase(function(elemnt))
+    if (word.toUpperCase().includes(element.toUpperCase())) {
       wordCount++
     }
   });
@@ -31,4 +32,4 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;
 }
 
-numberOfOccurrencesInText("Red", "My fav color is red")
+numberOfOccurrencesInText("RED", "My fav color is red");
