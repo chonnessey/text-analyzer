@@ -1,7 +1,7 @@
 // Business Logic
 
 function wordCounter(text) {
-  if (text.trim().length === 0) {
+  if (noInputtedword(text)) {
     return 0;
   }
   let wordCount = 0;
@@ -55,4 +55,14 @@ $(document).ready(function(){
     $("#total-count").html(wordCount);
     $("#selected-count").html(occurrencesOfWord);
   });
+
+  function noInputtedWord() {
+    for (let i=0; i < arguments.length; i++) {
+      console.log(arguments[i]);
+      if (arguments[i].trim().length === 0) {
+        return true;
+      }
+    }
+    return false;
+  }
 });
